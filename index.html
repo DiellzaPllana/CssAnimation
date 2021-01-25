@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa</title>
+    <link href="bootstrap-4.5.3-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        body {
+      margin: 0;
+    }
+
+    .image-container {
+      width: 100%;
+      position: relative;
+    }
+
+    .image-container>img {
+        height: 100vh;
+      width: 100%;
+      object-fit: cover;
+    }
+ .text-container #toka {
+     width: 100px;
+      position: absolute;
+      top: 70%;
+      left: 45%;
+      transform: translate(-30%, -55%);
+      transform-origin: center;
+animation-name: rotation-earth;
+animation-iteration-count: infinite;
+animation-duration: 4000ms;
+    } 
+    .text-container #mars {
+     width: 200px;
+      position: absolute;
+      top: 40%;
+      left: 15%;
+      transform: translate(-60%, -85%);
+      transform-origin: center;
+animation-name: rotation-earth;
+animation-iteration-count: infinite;
+animation-duration: 4000ms;
+    } 
+    .text-container #mercury {
+     width: 200px;
+      position: absolute;
+      top: 35%;
+      left: 75%;
+      transform: translate(-65%, -35%);
+      transform-origin: center;
+animation-name: rotation-earth;
+animation-iteration-count: infinite;
+animation-duration: 4000ms;
+    } 
+    .text-container p{
+        position: absolute;
+        top: 48%;
+        left: 53%;
+        transform: translate(-52%,-47%);
+        font-weight: bold;
+        color: white;
+        font-family: 'Montserrat';
+        font-size: 1.2rem;
+        /* text-align: justify; */
+    }
+    @keyframes ngjyra {
+  0% {
+    color: #001F3F;
+  }
+  50%{
+      color: white;
+  }
+  100% {
+    color: #FF4136;
+  }
+}
+
+    .text-container h1 {
+        font-family: 'Montserrat';
+        font-size: 3rem;
+        letter-spacing: 1.5rem;
+        text-transform: uppercase;
+      color: whitesmoke;
+      font-weight: 700;
+      position: absolute;
+      top: 35%;
+      left: 60%;
+      transform: translate(-55%, -40%);
+      animation: ngjyra 5s infinite;
+    
+    }
+    @keyframes rotation-earth {
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+  #toka:hover{
+      filter: contrast(200%);
+  }
+  #mars:hover{
+      filter: saturate(150%);
+  }
+  #mercury:hover{
+      filter: grayscale(200%);
+  }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="images/sky.jpg">
+        <div class="text-container">
+          <h1 class="col-10 col-sm-10 col-md-7 col-lg-5 col-xl-4">Nasa</h1>
+          <p class="text-center mt-4" style="color: white;">Lorem ipsum dolor sit amet Labore similique eligendi
+            eius. Incidunt soluta digniss quaerat,<br> mi corporis accusantium distinctio necessitatibus, sed
+            nemo vero.</p>          
+            <img src="images/earth.png" style="width: 130px;" id="toka">
+          <img src="images/mars.png" style="width: 130px;" id="mars">
+          <img src="images/mercury.png" style="width: 150px;" id="mercury">
+        </div>
+        </div>
+        
+        
+    <script src="jquery-3.5.1.js"></script>
+    <script src="bootstrap-4.5.3-dist/js/bootstrap.js"></script>
+</body>
+</html>
